@@ -72,7 +72,7 @@ var input_percent = function(){
     document.getElementById('output').textContent = dis_num;
 }
 
-// cの入力があったとき
+// Cの入力があったとき
 var input_clear = function(){
     num_flag=0;
     op_flag=0;
@@ -84,6 +84,7 @@ var input_clear = function(){
     console.log(total)
 }
 
+// CEの入力があったとき
 var input_clear_entry = function(){
     dis_num=0;
     document.getElementById('output').textContent = total;
