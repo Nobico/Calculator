@@ -1,14 +1,12 @@
-var num_flag = 0     //数字の入力があるかどうかを調べるフラグ
-var op_flag = 0      //演算子の入力があるかどうかを管理するフラグ
-var dot_flag = 0      //.が押されたかを管理するフラグ
-var first_flag = 0   //初めてボタンが押されたかを管理するフラグ
+var num_flag = 0;
+var op_flag = 0;
+var dot_flag = 0;
+var first_flag = 0;
 
-var dis_num = ''     //ディスプレイに表示する変数
-var total = 0        //計算結果を入れる変数
-var op               //演算子をいれる変数
+var dis_num = '';
+var total = 0;
+var op;
 
-
-//数字 or . の入力があったとき
 var input_number = function(value){
     if(value=='.'){
         if(first_flag==0){
@@ -32,7 +30,6 @@ var input_number = function(value){
     }
 }
 
-//演算子 or = の入力があったとき
 var input_operator = function(value){
     if(num_flag==1){
         if(op_flag==0){
@@ -65,14 +62,12 @@ var input_operator = function(value){
     }
 }
 
-// %の入力があったとき
 var input_percent = function(){
     var tmp = document.getElementById('output').textContent;
     dis_num=eval(tmp/100);
     document.getElementById('output').textContent = dis_num;
 }
 
-// Cの入力があったとき
 var input_clear = function(){
     num_flag=0;
     op_flag=0;
@@ -84,7 +79,6 @@ var input_clear = function(){
     console.log(total)
 }
 
-// CEの入力があったとき
 var input_clear_entry = function(){
     dis_num=0;
     document.getElementById('output').textContent = total;
